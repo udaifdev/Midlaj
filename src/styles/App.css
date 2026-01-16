@@ -1,0 +1,262 @@
+/* Animations */
+#app-root {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px var(--gold-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 25px var(--gold-glow), 0 0 5px var(--gold-accent);
+    }
+
+    100% {
+        box-shadow: 0 0 10px var(--gold-glow);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Container for 3D Transform */
+.scene-container {
+    perspective: 1200px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.transition-wrapper {
+    width: 100%;
+    height: 100%;
+    transition: transform 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1.5s ease;
+    transform-style: preserve-3d;
+}
+
+/* Opening Screen */
+.opening-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+}
+
+.couple-image-frame {
+    width: 280px;
+    height: 380px;
+    border: 2px solid var(--gold-accent);
+    border-radius: 150px 150px 0 0;
+    /* Arch shape */
+    padding: 10px;
+    position: relative;
+    margin-bottom: 2rem;
+    background: linear-gradient(to bottom, var(--gold-glow), transparent);
+    animation: float 6s ease-in-out infinite;
+}
+
+.couple-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 140px 140px 0 0;
+    border: 1px solid var(--gold-accent);
+    filter: sepia(30%) contrast(110%);
+}
+
+.tap-to-enter {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--gold-accent);
+    animation: glowPulse 2s infinite;
+    cursor: pointer;
+}
+
+/* Zoom Effect State */
+.zoomed-in {
+    transform: translateZ(1000px) scale(3);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Details Screen */
+.details-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+    /* Space for FAB */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease 1s;
+    /* Delay fade in until zoom starts */
+}
+
+.details-visible {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 50;
+    /* Ensure it sits on top */
+}
+
+.bismillah {
+    font-family: var(--font-arabic);
+    font-size: 2rem;
+    color: var(--gold-accent);
+    margin-bottom: 2rem;
+}
+
+.wedding-card {
+    background: var(--bg-paper);
+    border: 1px solid var(--gold-accent);
+    padding: 40px 20px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.wedding-card::before,
+.wedding-card::after {
+    content: "❧";
+    display: block;
+    font-size: 2rem;
+    color: var(--gold-accent);
+    margin: 10px 0;
+}
+
+.gold-text {
+    color: var(--gold-accent);
+}
+
+.info-block {
+    margin: 1.5rem 0;
+}
+
+.weds-divider {
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.weds-divider::before,
+.weds-divider::after {
+    content: "";
+    height: 1px;
+    width: 40px;
+    background: var(--gold-accent);
+}
+
+.location-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: none;
+    border: none;
+    color: var(--gold-accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.theme-toggle:hover {
+    opacity: 1;
+}
+
+/* Music Control */
+.music-control {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background: none;
+    border: none;
+    color: var(--gold-accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
