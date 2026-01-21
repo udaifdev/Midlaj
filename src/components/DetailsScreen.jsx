@@ -5,9 +5,9 @@ const DetailsScreen = () => {
         <div className="mobile-container">
             <div className="details-page">
                 <div className="detail-section">
-                    <h2 className="person-name">Mohammed Midlaj JU</h2>
-                    <p className="person-info">(s/o Joipore Ummer Haaji)</p>
-                    <p className="person-info">Virajpete Kondangeri</p>
+                    <h2 className="person-name">Groom</h2>
+                    <p className="person-info">(s/o Of Father Name)</p>
+                    <p className="person-info">Place Location</p>
                 </div>
 
                 <div className="detail-section">
@@ -15,16 +15,16 @@ const DetailsScreen = () => {
                 </div>
 
                 <div className="detail-section">
-                    <h2 className="person-name">Ayshathul Rehana</h2>
-                    <p className="person-info">(daughter of Kareem)</p>
-                    <p className="person-info">Virajpet</p>
+                    <h2 className="person-name">Bridel</h2>
+                    <p className="person-info">(daughter of Father Name)</p>
+                    <p className="person-info">Place Location</p>
                 </div>
 
                 <div className="detail-divider" />
 
                 <div className="detail-section">
                     <p className="detail-label">Location</p>
-                    <p className="detail-value">RG Hall, Virajpet, Kodagu, Karnataka</p>
+                    <p className="detail-value">RG Hall, Location, Kodagu, Karnataka</p>
                 </div>
 
                 <div className="detail-section">

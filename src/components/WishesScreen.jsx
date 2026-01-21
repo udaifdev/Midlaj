@@ -2,7 +2,7 @@ import React from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 
 const WishesScreen = ({ isMuted, toggleMute }) => {
-    const wishers = ['Fayaz', 'Killhir', 'Udaif', 'Ajmal Shan', 'Rahim'];
+    const wishers = ['Name-1', 'Name-2', 'Name-3', 'Name-4', 'Name-5'];
 
     return (
         <div className="mobile-container">

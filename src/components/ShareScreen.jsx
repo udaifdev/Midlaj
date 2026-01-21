@@ -5,7 +5,7 @@ const ShareScreen = () => {
     const handleShare = () => {
         const text = `You're Invited! 💒
 
-Mohammed Midlaj JU & Ayshathul Rehana
+Groomer & Bridel
 cordially invite you to their wedding celebration.
 
 📍 RG Hall, Virajpet, Kodagu, Karnataka
@@ -15,7 +15,7 @@ cordially invite you to their wedding celebration.
 We would be honored to have you share in our joy.
 
 With love,
-Mohammed & Rehana`;
+Groomer & Bridel`;
 
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
         window.open(whatsappUrl, '_blank');

@@ -1,33 +1,34 @@
 import React from 'react';
-import { Gift, ExternalLink } from 'lucide-react';
+import { Gift, ExternalLink, Heart } from 'lucide-react';
 
 const RegistryScreen = () => {
-    return (
+       return (
         <div className="mobile-container">
             <div className="gifts-page">
+                
                 <div className="gifts-illustration">
-                    <Gift size={80} />
+                    <Heart size={80} />
                 </div>
 
-                <h2 className="gifts-title">Gifts Registry</h2>
+                <h2 className="gifts-title">You're Invited</h2>
 
                 <p className="gifts-text">
-                    The best gift we could ask of you is your presence at our wedding.
-                    We hope that you come and share this day with us.
+                    You are warmly invited to celebrate our wedding day with us.
                     <br /><br />
-                    If you would like to give us a gift, we are registered on Macy's and Amazon.
+                    Your presence will make our day more special and meaningful.
+                    We truly hope you can join us and share this joyful moment.
                 </p>
 
                 <div className="registry-buttons">
-                    <a href="https://www.macys.com/registry" target="_blank" rel="noopener noreferrer" className="registry-btn">
-                        <ExternalLink size={18} />
-                        Macy's Registry
-                    </a>
-                    <a href="https://www.amazon.com/wedding" target="_blank" rel="noopener noreferrer" className="registry-btn">
-                        <ExternalLink size={18} />
-                        Amazon Registry
-                    </a>
+                    <button className="registry-btn">
+                        Join Us
+                    </button>
+
+                    <button className="registry-btn">
+                        Celebrate With Us
+                    </button>
                 </div>
+
             </div>
         </div>
     );

@@ -6,20 +6,20 @@ const OpeningScreen = ({ onNext }) => {
     <div className="opening-screen" onClick={onNext}>
       <div className="couple-images">
         <div className="person-frame">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Cyqs5EDAg1YS838VM_RLcsUbMnV0oqn5ce5mQ5P_Gg&s" alt="Mohammed Midlaj" />
+          <img src="https://www.manyavar.com/on/demandware.static/-/Library-Sites-ManyavarSharedLibrary/default/dw616a0c98/images/feeds/UC108664.jpg" alt="Mohammed Midlaj" />
         </div>
         <div className="couple-divider">
           <Heart size={28} fill="#d4af37" />
         </div>
         <div className="person-frame">
-          <img src="https://c8.alamy.com/comp/DKHG40/rural-indian-village-bride-dressed-in-colourful-sari-and-gold-jewelry-DKHG40.jpg" alt="Ayshathul Rehana" />
+          <img src="https://i.pinimg.com/736x/ca/27/6a/ca276a8984f445731beef2a57a59970c.jpg" alt="Ayshathul Rehana" />
         </div>
       </div>
 
       <h1 className="couple-names">
-        Mohammed Midlaj JU<br />
+        Groomer Name<br />
         &<br />
-        Ayshathul Rehana
+        Bridel Name
       </h1>
 
       <div className="tap-text">
